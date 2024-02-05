@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Calendar</title> <!-- By GhostyRex -->
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
+
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link type="text/css" rel="stylesheet" href="css/calendar.css">
+    <script type="text/javascript" src="js/calendar.js" defer></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="icons">
+                <span id="prev" class="chevron material-symbols-outlined">chevron_left</span>
+                <span class="current-date"><!-- Dynamically replace the months using javascript --></span>
+                <span id="next" class="chevron material-symbols-outlined">chevron_right</span>
+            </div>
+        </header>
+
+        <div class="calendar">
+            <ul class="weeks">
+                <li>Sun</li>
+                <li>Mon</li>
+                <li>Tue</li>
+                <li>Wed</li>
+                <li>Thu</li>
+                <li>Fri</li>
+                <li>Sat</li>
+            </ul>
+
+            <ul class="days"><!-- Dynamically replace the days using javascript --></ul>
+        </div>
+
+        <div class="selected-date-header">
+            Selected Date:
+        </div>
+        <div class="selected-date"></div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <form class="form-validate" enctype="multipart/form-data">
+              <div class="modal-header">
+                  <span class="close">&times;</span>
+                  <div class="modal-head">Select Your Date!</div>
+
+              </div>
+
+              <div class="modal-body border">
+                  <div class="row">
+                      <div class="col-12 modal-error-alert text-center pt-3 pb-5" style="color: red; font-weigh: bold; font-size: 15px; display: none;">
+                            Error: Please correct the date you just input. It is not a date!!!
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-lg-4 col-md-4 col-12 modal-day">
+                          Day:
+                          <input type="number" autocomplete="off" step="1" name="modal-day"
+                                 class="modal-day-input textinput form-control" max="31" min="1"/>
+                      </div>
+
+                      <div class="col-lg-4 col-md-4 col-12 modal-month">
+                          Month:
+                          <input type="number" autocomplete="off" step="1" name="modal-month"
+                                 class="modal-month-input textinput form-control" max="12" min="1"/>
+                      </div>
+
+                      <div class="col-lg-4 col-md-4 col-12 modal-year">
+                          Year:
+                          <input type="number" autocomplete="off" step="1" name="modal-year"
+                                 class="modal-year-input textinput form-control" max="3000" min="1800"/>
+                      </div>
+                  </div>
+
+              </div>
+
+              <div class="modal-footer">
+                  <button class="btn btn-dark btn-lg modal-button">Ok</button>
+              </div>
+          </form>
+
+      </div>
+
+    </div>
+</body>
+</html>
