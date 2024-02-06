@@ -182,6 +182,10 @@ header .icons .chevron:hover {
     .modal-content {
       width: 90%; /* Could be more or less, depending on screen size */
     }
+
+    .calendar-header .current-date {
+        font-size: 1.3rem;
+    }
 }
 
 
